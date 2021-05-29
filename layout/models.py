@@ -1,6 +1,7 @@
 from django.db import models
 
 
+# Navbars
 class Navbar(models.Model):
     icon = models.ImageField(
         upload_to='navbars/%Y/%m/', blank=True, null=True)
