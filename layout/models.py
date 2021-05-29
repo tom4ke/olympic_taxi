@@ -9,5 +9,9 @@ class Navbar(models.Model):
     url = models.CharField(max_length=100)
     code = models.CharField(max_length=10)
 
+    class Meta:
+        verbose_name_plural = 'Панель навигации'
+        verbose_name = 'Панель навигации'
+
     def __str__(self):
         return self.title

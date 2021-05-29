@@ -5,8 +5,8 @@ class Category(models.Model):
     title = models.CharField(max_length=50)
 
     class Meta:
-        verbose_name_plural = 'Categories'
-        verbose_name = 'Category'
+        verbose_name_plural = 'Категории'
+        verbose_name = 'Категория'
 
     def __str__(self):
         return self.title
@@ -19,8 +19,8 @@ class Inquiry(models.Model):
     phone_number = models.CharField(max_length=20)
 
     class Meta:
-        verbose_name_plural = 'Inquiries'
-        verbose_name = 'Inquiry'
+        verbose_name_plural = 'Заявки'
+        verbose_name = 'Заявка'
 
     def __str__(self):
         return self.first_name + ' - ' + self.phone_number
