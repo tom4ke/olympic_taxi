@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-=c!_7drr8t9!s=z6i#^--ojjn)-k(+q&22qyrwdkm8q6jzuism
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -40,7 +40,9 @@ AUTH_USER_MODEL = 'users.User'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+
     'corsheaders.middleware.CorsMiddleware',
+
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -48,10 +50,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000"
-]
+CORS_ALLOW_ALL_ORIGINS = True
+
 ROOT_URLCONF = 'olympic.urls'
 
 TEMPLATES = [
@@ -80,8 +80,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'olympic',
-        'USER': 'postgres',
-        'PASSWORD': '1234',
+        'USER': 'tomake',
+        'PASSWORD': '123456',
         'HOST': 'localhost'
     }
 }
